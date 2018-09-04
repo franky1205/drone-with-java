@@ -5,3 +5,7 @@ pipeline:
       - GRADLE_USER_HOME=~/.gradle
     commands:
       - ./gradlew test
+    when:
+      event:
+        - push
+        - pull_request
